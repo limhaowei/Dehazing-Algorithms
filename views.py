@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, send_from_directory
 from werkzeug.utils import secure_filename
 import os
 from config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS
@@ -33,3 +33,9 @@ def upload_file():
             
             return render_template('result.html', original=filename, result=result_filename)
     return render_template('index.html')
+
+
+def download_image(filename):
+    return send_from_directory(UPLOAD_FOLDER, filename, as_attachment=True)
+
+

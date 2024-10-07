@@ -20,6 +20,7 @@
     </div>
     <div class="actions">
         <a href="{{ url_for('upload_file') }}" class="button">Try another image</a>
+        <a href="{{ url_for('download_image', filename=result) }}" class="button">Download Dehazed Image</a>
     </div>
 </body>
 </html>
