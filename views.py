@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 import os
 from config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS
 from model import dehaze_image
+from PIL import Image
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -23,6 +24,7 @@ def upload_file():
             
             # Process the image
             result_image = dehaze_image(filepath)
+            result_image = Image.fromarray(result_image)
             
             # Save the result
             result_filename = 'dehazed_' + filename
