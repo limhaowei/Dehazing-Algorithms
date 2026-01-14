@@ -19,7 +19,7 @@ ALLOWED_MIME_TYPES = {'image/png', 'image/jpeg', 'image/jpg'}
 
 # File upload size constraints
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB in bytes
-MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10 MB max upload size for Flask
+MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10 MB max upload size for 
 
 # Image dimension constraints
 MAX_IMAGE_WIDTH = 4096
