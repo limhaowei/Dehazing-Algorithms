@@ -141,7 +141,3 @@ Dehazing-Algorithms/
 - **Progress Indicators**: Visual feedback during processing
 - **Image Comparison**: Side-by-side view of original and processed images
 - **Format Preservation**: Maintains original image format when possible
-
-## License
-
-[Add your license information here]
